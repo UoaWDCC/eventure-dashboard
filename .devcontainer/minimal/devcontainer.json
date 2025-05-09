@@ -1,0 +1,33 @@
+{
+  "build": {
+    "dockerfile": "../../docker/eventure-dashboard-devel.dockerfile"
+  },
+  "name": "eventure-dashboard",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "dbaeumer.vscode-eslint",
+        "42Crunch.vscode-openapi",
+        "GitHub.copilot",
+        "esbenp.prettier-vscode",
+        "Tim-Koehler.helm-intellisense",
+        "ms-kubernetes-tools.vscode-kubernetes-tools"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "prettier.configPath": "${containerWorkspaceFolder}/frontend/.prettierrc",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/repo,type=bind,consistency=cached",
+  "workspaceFolder": "/repo",
+  "shutdownAction": "stopContainer",
+  "remoteUser": "root",
+  "mounts": [
+  ],
+  "runArgs": [
+  ],
+  "postCreateCommand": "bash ./scripts/bash/post-dev-container-create.sh"
+}
