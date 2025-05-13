@@ -1,0 +1,18 @@
+.button {
+    position: relative;
+    background-image: linear-gradient(to right, #4D6EFF, #7BB1FF, #4D6EFF);
+    color: white;
+    border: none;
+    border-radius: 32px;
+    padding: 1rem 5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: block;
+    margin: 10px auto;
+    background-size: 200% auto;
+}
+
+.button:hover {
+    background-position: right center;
+}
