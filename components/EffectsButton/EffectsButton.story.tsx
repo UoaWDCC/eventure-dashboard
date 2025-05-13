@@ -1,7 +1,7 @@
 import { EffectsButton } from './EffectsButton';
 
 export default {
-	title: 'EffectsButton',
+  title: 'EffectsButton',
 };
 
 export const Usage = () => <EffectsButton />;
