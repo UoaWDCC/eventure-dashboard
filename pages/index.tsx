@@ -1,4 +1,5 @@
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import { EffectsButton } from '../components/EffectsButton/EffectsButton';
 import { Welcome } from '../components/Welcome/Welcome';
 
 export default function HomePage() {
@@ -6,6 +7,7 @@ export default function HomePage() {
     <>
       <Welcome />
       <ColorSchemeToggle />
+      <EffectsButton />
     </>
   );
 }
