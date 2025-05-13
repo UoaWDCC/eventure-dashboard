@@ -40,7 +40,7 @@
   font-size: 1.1rem;
   text-align: center;
   opacity: 1;
-  animation: fadeIn 0.4s ease;
+  animation: fade-in 0.4s ease;
 }
 
 /* fadeIn animation */
@@ -58,7 +58,7 @@
 
 /* fadeOut animation */
 .fadeOut {
-  animation: fadeOut 0.5s forwards;
+  animation: fade-out 0.5s forwards;
 }
 
 @keyframes fade-out {
