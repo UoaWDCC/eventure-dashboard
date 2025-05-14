@@ -1,0 +1,41 @@
+.button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.button.danger {
+  /* background-color: rgb(255, 153, 102); */
+  background-color: #0070f3;
+
+  animation: blink 1s infinite;
+	pointer-events: none;
+  cursor: not-allowed;
+}
+
+.button.danger:hover {
+  /* background-color: rgb(255, 153, 102); */
+  background-color: #0070f3;
+
+  cursor: default;
+  animation: none; /* cancel the blink when hovered */
+}
+
+.button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
