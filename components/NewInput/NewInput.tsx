@@ -1,31 +1,43 @@
 import { useState } from 'react';
-import {Group, TextInput } from '@mantine/core';
-import classes from './input.module.css';
+import {TextInput, Button, Stack, Group } from '@mantine/core';
+import classes from './NewInput.module.css';
 
 export function NewInput() {
   const [focused, setFocused] = useState(false);
   const [value, setValue] = useState('');
   const floating = value.trim().length !== 0 || focused || undefined;
+  const [submits, setSubmits] = useState('')
 
+  const handleSubmit = () => {
+    setSubmits(`Last Note: ${value}`);
+    if (value.trim() === '') {
+      setSubmits('Add a note');
+    }
+  }
   return (
-    <Group justify="center" mt="xl">
-      <TextInput
-        label="Name"
-        placeholder="Enter your name"
-        required
-        classNames={classes}
-        value={value}
-        onChange={(event) => setValue(event.currentTarget.value)}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
-        mt="md"
-        autoComplete="nope"
-        data-floating={floating}
-        labelProps={{ 'data-floating': floating }}
-      />
-      <button type = "button">
-        Submit
-      </button>
-    </Group>
+    <Stack>
+      <Group justify="center" mt="xl">
+        <TextInput
+          label="New note"
+          placeholder="Add a note"
+          required
+          classNames={classes}
+          value={value}
+          onChange={(event) => setValue(event.currentTarget.value)}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          mt="md"
+          autoComplete="nope"
+          data-floating={floating}
+          labelProps={{ 'data-floating': floating }}
+        />
+        <Button type="button" onClick={() => handleSubmit()}>
+          Submit
+        </Button>
+      </Group>
+      <div className={classes.submittedText}>
+      {submits}
+      </div>
+    </Stack>
   );
 }
