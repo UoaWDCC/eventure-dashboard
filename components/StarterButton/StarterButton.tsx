@@ -1,22 +1,15 @@
-import { Popover, Text, Button } from '@mantine/core';
+import { Popover, Image, Button } from '@mantine/core';
 
-export default function StarterButton() {
+export function StarterButton() {
     return (
-        <Popover width={200} position="top" withArrow shadow="md" offset={10}>
+        <Popover width={200} position="bottom" withArrow shadow="lg" offset={5}>
             <Popover.Target>
-                <Button variant="outline" color="blue">
+                <Button variant="outline" color="orange" ml="45%" w="10rem" mt="2rem">
                     Tung
                 </Button>
             </Popover.Target>
             <Popover.Dropdown>
-                <Text 
-                    size="xl" 
-                    fw={900} 
-                    variant="gradient" 
-                    gradient={{from: 'blue', to: 'red', deg: 90}}
-                >
-                    Tung Tung Sahur
-                </Text>
+                 <Image src="/ttts.jpg" alt="tung tung tung sahur" bd="solid" />
             </Popover.Dropdown>
         </Popover>
     )
