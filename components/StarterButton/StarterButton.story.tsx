@@ -1,4 +1,4 @@
-import { StarterButton } from './StarterButton';
+import StarterButton from './StarterButton';
 
 export default {
   title: 'StarterButton',

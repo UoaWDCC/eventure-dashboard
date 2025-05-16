@@ -1,6 +1,6 @@
 import { Popover, Image, Button } from '@mantine/core';
 
-export function StarterButton() {
+export default function StarterButton() {
     return (
         <Popover width={200} position="bottom" withArrow shadow="lg" offset={5}>
             <Popover.Target>
